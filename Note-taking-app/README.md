@@ -18,11 +18,11 @@ Bootstrap: Frontend framework for designing the user interface.
 Laravel Breeze: Used for quick setup of authentication.
 
 ## Getting Started
-Clone the repository: git clone <repository-url>
-Install dependencies: composer install && npm install
-Set up environment variables: Rename .env.example to .env and configure database settings.
-Generate application key: php artisan key:generate
-Run migrations: php artisan migrate
+Clone the repository: git clone <repository-url><br>
+Install dependencies: composer install && npm install<br>
+Set up environment variables: Rename .env.example to .env and configure database settings.<br>
+Generate application key: php artisan key:generate<br>
+Run migrations: php artisan migrate<br>
 Serve the application: php artisan serve
 
 ## Usage
