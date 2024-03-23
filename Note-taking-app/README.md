@@ -3,8 +3,8 @@
 This is a simple Note-taking application built using Laravel. The application allows users to input their daily notes and manage them efficiently.
 
 ## Features
-### User Authentication:
-Users can register, login, and logout securely to access their notes.
+### User Authentication: <P>Users can register, login, and logout securely to access their notes.</P>
+
 ### Note Management:
 Users can create, edit, and delete notes.
 Each note includes a title, content, creation date, and last modified date.
