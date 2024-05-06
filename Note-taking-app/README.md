@@ -55,8 +55,6 @@ Rename .env.example to .env and configure database settings.<br>
 php artisan migrate
 php artisan serve
 ```
-
-
 ## Usage
 Register or login to access the application.
 Once logged in, you can create, edit, delete, and search for notes.
