@@ -21,13 +21,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="content" class="form-label">Content</label>
-                        <input type="content" name="content" class="form-control" id="content"
-                            value="{{ $note->content }}">
-                    </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        <textarea name="content" class="form-control" id="summernote" value="{{ $note->content }}"></textarea>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 5',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+@endpush

@@ -24,7 +24,7 @@
                 @foreach ($notes as $note)
                     <tr>
                         <td>{{ $note->id }}</td>
-                        <td>{{ $note->title }}</td>
+                        <td>{!! Str::limit($note->title, 15, '...') !!}</td>
                         <td>{!! Str::limit($note->content, 20, '...') !!}</td>
                         <td>{{ $note->created_at->format('d-M-Y') }}</td>
                         <td>{{ $note->updated_at }}</td>

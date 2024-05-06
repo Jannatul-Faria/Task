@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -32,9 +33,9 @@ class NoteController extends Controller
         Note::create([
             'title'=>$request->title,
             'content'=>$request->content,
+            'slug'=>Str::slug($request->title),
         ]);
-       
-        
+        notyf()->ripple(true)->addSuccess('Your Note has been saved.');
         return redirect()->route('note.index');
     }
 
@@ -61,6 +62,7 @@ class NoteController extends Controller
     public function update(Request $request, Note $note)
     {
         $note->update($request->all());
+        notyf()->ripple(true)->addSuccess('Your Note has been updated.');
         return redirect()->route('note.index');
     }
 
@@ -68,6 +70,8 @@ class NoteController extends Controller
     public function destroy(Note $note)
     {
          $note->delete();
+        
+        notyf()->dismissible(true)->addError('Note deleted Successfully.');
          return redirect()->route('note.index');
     }
     

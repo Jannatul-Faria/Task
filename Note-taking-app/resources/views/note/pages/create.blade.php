@@ -12,7 +12,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="content" class="form-label">Content</label>
-                        <input type="content" name="content" class="form-control" id="content">
+
+                        <textarea name="content" class="form-control" id="summernote" placeholder="Enter description"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -21,3 +22,12 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 5',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+@endpush
